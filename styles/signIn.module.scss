@@ -1,0 +1,103 @@
+$main-color: #d9d9d9;
+$sub-color: #797979;
+$alt-color: #b4a889;
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+  box-sizing: border-box;
+
+  .logo {
+    position: relative;
+    bottom: 50px;
+    height: 65px;
+    width: 65px;
+    border: 1px solid #000;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .login {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 95%;
+    margin: 1em 2em 1em;
+    background-color: $main-color;
+    border-radius: 10px;
+    min-width: 500px;
+  }
+
+  .login > input {
+    width: 60%;
+    height: 33px;
+    border-radius: 5px;
+    background-color: $alt-color;
+    margin: 1.5rem;
+    padding: 10px;
+    color: $sub-color;
+  }
+
+  .login > ::placeholder {
+    color: $sub-color;
+  }
+  .button {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+    border-radius: 5px;
+    width: 60%;
+    height: 40px;
+    margin: 2rem 0 4rem;
+  }
+  .button:active {
+    transition: ease 0.5s;
+    transform: scale(0.9);
+  }
+  .footer {
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .footer > span {
+    position: absolute;
+    bottom: 40px;
+    right: 140px;
+    color: $sub-color;
+  }
+  a {
+    color: $alt-color;
+    font-style: oblique;
+  }
+}
+
+$breakpoint-mobile: 390px;
+@media (max-width: $breakpoint-mobile) {
+  .container {
+    display: grid;
+    position: relative;
+    width: auto;
+    height: 100vh;
+    grid-template-columns: repeat(8, 2fr);
+    margin: 10%;
+    box-sizing: border-box;
+  }
+
+  .login {
+    height: 100vh;
+    position: relative;
+    right: 50px;
+  }
+}
